@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-muted" class="text-justify"><b>Register</b></h2>
+    <p>Please Fill The Following Fields To Register</p>
+    <form action="/action_page.php" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="uname">First Name :</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter First Name" name="uname" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please Fill Out This Field</div><br>
+        </div>
+        <div class="form-group">
+            <label for="uname">Last Name :</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter Last Name" name="uname" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please Fill Out This Field</div><br>
+        </div>
+    <div>
+            Gender: <br>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other<br>
+    </div>
+    <div>
+        <label for="uname">Mobile Number :</label>
+        <input type="number" class="form-control" id="uname" placeholder="Enter Mobile Number" name="uname" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please Fill Out This Field</div><br>
+    </div>
+    <div class="form-group">
+        <label for="uname">E-mail ID :</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter E-mail ID" name="uname" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please Fill Out This Field</div><br>
+    </div>
+    <div class="form-group">
+            <label for="pwd">Password :</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please Fill Out This Field</div><br>
+    </div>
+    <div>
+        <label for="uname">Trusted Contact Mobile Number :</label>
+        <input type="number" class="form-control" id="uname" placeholder="Enter Mobile Number" name="uname" required>
+        <label for="uname">Trusted Contact E-mail ID :</label>
+        <input type="email" class="form-control" id="uname" placeholder="Enter E-mail ID " name="uname" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please Fill Out This Field</div><br>
+    </div>
+    <div>
+        <label for="uname">Trusted Contact Mobile Number (Optional) :</label>
+        <input type="number" class="form-control" id="uname" placeholder="Enter Mobile Number" name="uname" >
+        <label for="uname">Trusted Contact E-mail ID (Optional) :</label>
+        <input type="email" class="form-control" id="uname" placeholder="Enter E-mail ID " name="uname">
+        <div class="valid-feedback">Valid</div><br>
+    </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember" required> I agree on all of the terms and conditions. 
+          <div class="valid-feedback">Valid</div>
+          <div class="invalid-feedback">Check this checkbox to continue</div><br><br>
+        </label>
+    </div>
+        <button type="submit" class="btn btn-primary">Submit</button><br>
+    </form>
+</div>
+<script>
+    
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+</body>
+</html>        
+
